@@ -18,9 +18,9 @@ export default function Task({
   deleteTask,
 }: TaskProps){
   return (
-    <div className={completed ? "task-container completed flex justify-center gap-2 my-4 line-through" : "task-container flex justify-center gap-2 my-4 "}>
+    <div className={completed ? "task-container completed flex gap-2 my-4 line-through" : "task-container flex justify-center gap-2 my-4 "}>
       <div
-        className="task-text bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-blue-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="task-text px-4 py-2 m-auto border bg-opacity-30 bg-blue-600 border-gray-200 rounded-xl shadow-2xl bottom-4 overflow-x w-screen"
         onClick={() => completeTask(id)}
       >
         {text}

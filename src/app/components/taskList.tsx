@@ -1,5 +1,5 @@
-
 "use client"
+
 import { useState } from "react"
 
 import TaskForm from "./form"
@@ -42,7 +42,7 @@ export default function TasksList() {
   return (
     <>
       <TaskForm onSubmit={addTask}/>
-      <div className="tasks-list-container flex-col justify-between items-center p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 overflow-y-auto max-h-96 ">
+      <div className="tasks-list-container bg-zinc-900 bg-opacity-50 overflow-y-auto max-w-xl h-96 w-96 px-4 py-2 m-auto  border border-gray-200 rounded-xl shadow-2xl bottom-4 ">
         {
           tasks.map((task) =>
             <Task

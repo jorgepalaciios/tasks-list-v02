@@ -12,7 +12,7 @@ interface TaskFormProps {
 }
 
 export default function TaskForm({ onSubmit }: TaskFormProps){
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("")
 
   // e is for event
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,18 +30,18 @@ export default function TaskForm({ onSubmit }: TaskFormProps){
   };
 
   return (
-    <form className="task-form grid gap-6 mb-6 md:grid-cols-2 " onSubmit={handleSend}>
+    <form className="task-form flex mb-6 items-center justify-center " onSubmit={handleSend}>
       <input
-        className="task-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="task-input fixed w-full max-w-xl px-4 py-2 m-auto mb-8 border border-gray-200 rounded-full shadow-2xl bottom-4"
         type="text"
-        placeholder="Add a new task"
+        placeholder="Add a new task and press enter 😎"
         name="text"
         onChange={handleChange}
         required
       />
-      <button className="task-button text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+      {/* <button className="task-button text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
       type="submit"
-      >Add New Task</button>
+      >Add New Task</button> */}
     </form>
   );
 }
