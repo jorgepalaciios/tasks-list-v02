@@ -1,4 +1,3 @@
-
 import React, { useState } from "react"
 
 interface Task {
@@ -20,28 +19,28 @@ export default function TaskForm({ onSubmit }: TaskFormProps){
   };
 
   const handleSend = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     const newTask = {
       id: crypto.randomUUID(),
       text: input,
       completed: false,
     };
-    onSubmit(newTask);
-  };
+    onSubmit(newTask)
+    // this should clear th field
+    setInput("")
+  }
 
   return (
     <form className="task-form flex mb-6 items-center justify-center " onSubmit={handleSend}>
       <input
-        className="task-input fixed w-full max-w-xl px-4 py-2 m-auto mb-8 border border-gray-200 rounded-full shadow-2xl bottom-4"
+        className="task-input fixed w-full max-w-xl px-4 py-2 m-auto mb-8 border border-gray-200 rounded-full shadow-xl bottom-4 hover:bg-slate-700"
         type="text"
         placeholder="Add a new task and press enter 😎"
         name="text"
         onChange={handleChange}
+        value={input}
         required
       />
-      {/* <button className="task-button text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-      type="submit"
-      >Add New Task</button> */}
     </form>
   );
 }

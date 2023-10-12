@@ -42,7 +42,7 @@ export default function TasksList() {
   return (
     <>
       <TaskForm onSubmit={addTask}/>
-      <div className="tasks-list-container bg-zinc-900 bg-opacity-50 overflow-y-auto max-w-xl h-96 w-96 px-4 py-2 m-auto  border border-gray-200 rounded-xl shadow-2xl bottom-4 ">
+      <div className="tasks-list-container bg-zinc-900 bg-opacity-50 overflow-y-auto max-w-xl h-96 w-screen px-4 py-2 m-auto  border border-gray-200 rounded-md shadow-md bottom-4 ">
         {
           tasks.map((task) =>
             <Task
